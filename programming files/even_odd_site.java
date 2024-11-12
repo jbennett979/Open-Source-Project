@@ -4,9 +4,14 @@ import java.io.*;
 
 public class even_odd_site {
     public static void main(String[] args) throws IOException {
+        //open file to write sequence of numbers to
         BufferedWriter file = new BufferedWriter(new FileWriter("numbers.html"));
         file.write("<html>\n<head>\n<title>List of Numbers</title>\n</head>\n<body>\n");
         file.write("<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n");
+        /*loop through all numbers 1-50
+     * if the number is even, write under the even number header
+     * otherwise, write under the odd number header
+     * */
         for (int i = 1; i <= 50; i++) {
             if (i % 2 == 0) {
                 file.write("<tr><td>" + i + "</td><td></td></tr>\n");
@@ -19,9 +24,11 @@ public class even_odd_site {
         file.close();
         BufferedReader reader = new BufferedReader(new FileReader("numbers.html"));
         String line;
+        //print out the created file
         while ((line = reader.readLine()) != null) {
             System.out.println(line);
         }
+        //close file
         reader.close();
     }
 }
