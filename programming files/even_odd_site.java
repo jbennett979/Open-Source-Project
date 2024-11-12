@@ -4,6 +4,7 @@ import java.io.*;
 
 public class even_odd_site {
     public static void main(String[] args) throws ioException {
+        //BufferedReader should be BufferedWriter
         BufferedReader file = new BufferedReader(new FileWriter("numbers.html"));
         file.write("<html><head><title>List of Numbers</title></head><body>");
         file.write("<table><tr><th>Even Numbers</th><th>Odd Numbers</th></tr>");
