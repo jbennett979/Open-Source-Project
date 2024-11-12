@@ -7,12 +7,12 @@ public class remove_duplicates {
     public static List<Integer> removeDuplicates(List<Integer> arr, List<Integer> removedElements) {
         List<Integer> uniqueArr = new ArrayList<>();
         //loops through array identifies unique elements by checking if they are in uniqueArr
-        for (int i = 1; i < arr.size(); i++) {
-            if (uniqueArr.contains(arr.get(i+1))) {
-                uniqueArr.add(arr.get(i+1));
+        for (int i = 1; i < uniqueArr.size(); i++) {
+            if (arr.contains(arr.get(i+1))) {
+                arr.add(arr.get(i+1));
             } else {
                 //removes elements if they are in uniqueArr already and stores them to array of removed elements
-                removedElements.add(arr.get(i+1));
+                removedElements.add(uniqueArr.get(i+1));
             }
         }
         return uniqueArr;
