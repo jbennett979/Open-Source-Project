@@ -5,14 +5,19 @@
 using namespace std;
 
 int main() {
-    // opening html file
+     //open file to write sequence of numbers to
     ofstream file;
-    file.open("number.html");
-    // creating header
+    file.open("numbers.html");
+
+     //Headers
     file << "<html>\n<head>\n<title>List of Numbers</title>\n</head>\n<body>\n";
     file << "<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n";
-    // writing even numbers to file in one table column and odd numbers in another
-    for (int i = 0; i <= 50; i++) {
+
+    /*loop through all numbers 1-50
+     * if the number is even, write under the even number header
+     * otherwise, write under the odd number header
+     * */
+    for (int i = 1; i <= 50; i++) {
         if (i % 2 == 0) {
             file << "<tr><td>" << i << "</td><td></td></tr>\n";
         }
@@ -21,10 +26,12 @@ int main() {
         }
     }
     file << "</table>\n</body>\n</html>";
-    // close file
-    close(file);
-    // print file contents
-    ifstream input("number.html");
+      //close file
+    file.close();
+
+    //print out the created file
+    ifstream input("numbers.html");
+
     cout << input.rdbuf();
     input.close();
     return 0;
