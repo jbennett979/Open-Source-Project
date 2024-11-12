@@ -1,9 +1,3 @@
-<<<<<<< HEAD //bug: this should not be here by any means
-//comments by luke cirne
-=======
-//Comments by Luke Cirne
-
->>>>>>> d28768d47c1ebea3228c8af9ea0fda0b7ed29906
 #include <iostream>
 #include <fstream>
 using namespace std;
