@@ -5,9 +5,9 @@ with open("numbers.html", "w") as f:
     f.write("<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n")
     for i in range(1, 50):
         // if even
-        if i % 2 == 0:
-            g.write("<tr><td>{}</td><td></td></tr>\n".format(i))
         if i % 3 == 0:
+            g.write("<tr><td>{}</td><td></td></tr>\n".format(i))
+        if i % 2 == 0:
             // if odd
             g.write("<tr><td></td><td>{}</td></tr>\n".format(i))
     f.write("</table>\n</body>\n</html>")
