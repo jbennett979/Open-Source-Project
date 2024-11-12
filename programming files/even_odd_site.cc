@@ -7,12 +7,12 @@ using namespace std;
 int main() {
     // opening html file
     ofstream file;
-    file.open("numbers.html");
+    file.open("number.html");
     // creating header
     file << "<html>\n<head>\n<title>List of Numbers</title>\n</head>\n<body>\n";
     file << "<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n";
     // writing even numbers to file in one table column and odd numbers in another
-    for (int i = 1; i <= 50; i++) {
+    for (int i = 0; i <= 50; i++) {
         if (i % 2 == 0) {
             file << "<tr><td>" << i << "</td><td></td></tr>\n";
         }
@@ -22,9 +22,9 @@ int main() {
     }
     file << "</table>\n</body>\n</html>";
     // close file
-    file.close();
+    close(file);
     // print file contents
-    ifstream input("numbers.html");
+    ifstream input("number.html");
     cout << input.rdbuf();
     input.close();
     return 0;
