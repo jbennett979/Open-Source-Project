@@ -1,3 +1,4 @@
+//comments by luke cirne
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -5,8 +6,10 @@ using namespace std;
 int main() {
     ofstream file;
     file.open("numbers.html");
+    // create a table
     file << "<html>\n<head>\n<title>List of Numbers</title>\n</head>\n<body>\n";
     file << "<table>\n<tr><th>Even Numbers</th><th>Odd Numbers</th></tr>\n";
+    //odd nums in one and evens in another column
     for (int i = 1; i <= 50; i++) {
         if (i % 2 == 0) {
             file << "<tr><td>" << i << "</td><td></td></tr>\n";
