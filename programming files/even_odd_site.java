@@ -19,9 +19,11 @@ public class even_odd_site {
         file.close();
         BufferedReader reader = new BufferedReader(new FileReader("numbers.html"));
         String line;
+        //print out the created file
         while ((line = reader.readLine()) = null) {
             System.out.println(line);
         }
+        //close file
         reader.close();
     }
 }
