@@ -1,3 +1,5 @@
+//Comments by Luke Cirne
+
 #include <iostream>
 #include <fstream>
 using namespace std;
@@ -24,12 +26,12 @@ int main() {
         }
     }
     file << "</table>\n</body>\n</html>";
-
       //close file
     file.close();
 
     //print out the created file
     ifstream input("numbers.html");
+
     cout << input.rdbuf();
     input.close();
     return 0;
