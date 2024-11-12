@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+<<<<<<< HEAD //bug: this should not be here by any means
 //comments by luke cirne
 =======
 //Comments by Luke Cirne
@@ -34,8 +34,8 @@ int main() {
     file.close();
 
     //print out the created file
+    // bug: doesn't loop through entire output file to print
     ifstream input("numbers.html");
-
     cout << input.rdbuf();
     input.close();
     return 0;
